@@ -1,0 +1,309 @@
+<title>SMK Vision Privacy Policy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  :root{
+    --ground:#faf7f1;
+    --surface:#fffdf8;
+    --raised:#f2ece2;
+    --text:#30261e;
+    --muted:#726353;
+    --faint:#8d7b68;
+    --line:#dfd3c2;
+    --accent:#855a32;
+    --keep:#4e6538;
+    --send:#9a5f2a;
+    --never:#a43525;
+    --serif:"Source Serif 4",Georgia,"Times New Roman",serif;
+    --sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+    --mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --ground:#191512; --surface:#211c18; --raised:#15120f;
+      --text:#f0e7db; --muted:#b8aa9a; --faint:#8d7b69;
+      --line:#3e332a; --accent:#d1af85;
+      --keep:#b7c29c; --send:#d7b58c; --never:#efaa9a;
+    }
+  }
+  :root[data-theme="dark"]{
+    --ground:#191512; --surface:#211c18; --raised:#15120f;
+    --text:#f0e7db; --muted:#b8aa9a; --faint:#8d7b69;
+    --line:#3e332a; --accent:#d1af85;
+    --keep:#b7c29c; --send:#d7b58c; --never:#efaa9a;
+  }
+
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--ground); color:var(--text);
+    font-family:var(--sans); font-size:16px; line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  .page{max-width:46rem;margin:0 auto;padding:clamp(2.5rem,6vw,5rem) clamp(1.25rem,5vw,2.5rem) 5rem}
+
+  header{display:flex;flex-direction:column;gap:1.5rem;padding-bottom:2.5rem;border-bottom:1px solid var(--line)}
+  .brand{display:flex;align-items:center;gap:.9rem}
+  .mark{
+    display:grid;place-items:center;width:2.75rem;height:2.75rem;flex-shrink:0;
+    border:1px solid var(--accent);color:var(--accent);
+    font-family:var(--serif);font-size:1.6rem;position:relative;
+  }
+  .mark::after{content:"";position:absolute;inset:4px;border:1px solid var(--line)}
+  .brand-name{font-size:1.05rem;letter-spacing:.01em}
+  .brand-name b{font-weight:400;color:var(--muted)}
+  .brand-name span{display:block;font-size:.62rem;letter-spacing:.16em;color:var(--faint);margin-top:.2rem}
+  h1{
+    font-family:var(--serif);font-weight:600;font-size:clamp(2rem,5vw,2.8rem);
+    line-height:1.12;margin:0;text-wrap:balance;letter-spacing:-.015em;
+  }
+  .meta{display:flex;flex-wrap:wrap;gap:.5rem 1.5rem;font-size:.8rem;color:var(--faint);font-family:var(--mono)}
+
+  .thesis{
+    font-family:var(--serif);font-size:1.18rem;line-height:1.55;color:var(--text);
+    margin:2.5rem 0 0;padding-left:1.1rem;border-left:2px solid var(--accent);
+  }
+
+  h2{
+    font-family:var(--serif);font-weight:600;font-size:1.3rem;line-height:1.3;
+    margin:3rem 0 .85rem;display:flex;gap:.8rem;align-items:baseline;text-wrap:balance;
+  }
+  h2 .n{
+    font-family:var(--mono);font-size:.72rem;font-weight:500;color:var(--accent);
+    flex-shrink:0;padding-top:.2rem;font-variant-numeric:tabular-nums;
+  }
+  h3{font-family:var(--sans);font-weight:600;font-size:.95rem;margin:1.75rem 0 .5rem;color:var(--text)}
+  p{margin:0 0 1rem}
+  p,li{color:var(--muted)}
+  strong{color:var(--text);font-weight:600}
+  a{color:var(--accent);text-decoration:underline;text-underline-offset:.18em;text-decoration-thickness:1px}
+  a:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+  code{
+    font-family:var(--mono);font-size:.86em;background:var(--raised);
+    border:1px solid var(--line);border-radius:3px;padding:.08em .35em;color:var(--text);
+  }
+  ul{margin:0 0 1rem;padding-left:1.15rem}
+  li{margin-bottom:.4rem}
+  li::marker{color:var(--faint)}
+
+  /* At-a-glance ledger: three outcomes, encoded by colour and position. */
+  .ledger{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:6px;overflow:hidden;margin:2rem 0}
+  .ledger div{background:var(--surface);padding:1.05rem 1.2rem}
+  .ledger dt{
+    font-family:var(--mono);font-size:.66rem;letter-spacing:.12em;
+    text-transform:uppercase;margin-bottom:.45rem;
+  }
+  .ledger .keep dt{color:var(--keep)}
+  .ledger .send dt{color:var(--send)}
+  .ledger .never dt{color:var(--never)}
+  .ledger dd{margin:0;font-size:.92rem;line-height:1.55;color:var(--muted)}
+  .ledger dd b{color:var(--text);font-weight:600}
+  @media (min-width:34rem){.ledger{grid-template-columns:1fr 1fr 1fr}}
+
+  .scroll{overflow-x:auto;margin:1.25rem 0;border:1px solid var(--line);border-radius:6px}
+  table{border-collapse:collapse;width:100%;font-size:.88rem;min-width:30rem}
+  th,td{text-align:left;padding:.7rem .9rem;border-bottom:1px solid var(--line);vertical-align:top}
+  thead th{
+    background:var(--raised);font-family:var(--mono);font-weight:500;
+    font-size:.66rem;letter-spacing:.11em;text-transform:uppercase;color:var(--faint);
+  }
+  tbody tr:last-child td{border-bottom:0}
+  td:first-child{white-space:nowrap}
+  td code{background:none;border:0;padding:0;color:var(--accent)}
+
+  .endpoints{list-style:none;padding:0;margin:1.25rem 0}
+  .endpoints li{
+    display:flex;flex-wrap:wrap;gap:.3rem 1rem;align-items:baseline;
+    padding:.6rem 0;border-bottom:1px solid var(--line);margin:0;
+  }
+  .endpoints li:last-child{border-bottom:0}
+  .endpoints b{color:var(--text);font-weight:600;font-size:.92rem;min-width:7.5rem}
+  .endpoints code{font-size:.78rem;background:none;border:0;padding:0;color:var(--faint)}
+
+  footer{margin-top:4rem;padding-top:1.75rem;border-top:1px solid var(--line);font-size:.82rem;color:var(--faint)}
+  footer p{color:var(--faint);font-size:.82rem}
+</style>
+
+<div class="page">
+  <header>
+    <div class="brand">
+      <div class="mark" aria-hidden="true">S</div>
+      <div class="brand-name">SMK <b>Vision</b><span>CHROME EXTENSION</span></div>
+    </div>
+    <h1>Privacy Policy</h1>
+    <div class="meta">
+      <span>Version 5.1.0</span>
+      <span>Effective 20 October 2026</span>
+    </div>
+  </header>
+
+  <p class="thesis">
+    SMK Vision has no server. There is no account to create, nothing is logged, and the
+    developer receives no data of any kind. The only thing that ever leaves your computer is
+    a screenshot you explicitly asked to send, going directly to the AI service whose API key
+    you entered yourself.
+  </p>
+
+  <dl class="ledger">
+    <div class="keep">
+      <dt>Stays on your device</dt>
+      <dd><b>API keys, settings, hotkeys, and your last 10 answers.</b> Held in your browser's extension storage.</dd>
+    </div>
+    <div class="send">
+      <dt>Sent, when you ask</dt>
+      <dd><b>One screenshot and your prompt</b> — to the AI service you configured, and nowhere else.</dd>
+    </div>
+    <div class="never">
+      <dt>Never collected</dt>
+      <dd><b>No analytics, no telemetry, no page content, no browsing history, no identity.</b></dd>
+    </div>
+  </dl>
+
+  <h2><span class="n">01</span> What this extension does</h2>
+  <p>
+    When you press its keyboard shortcut or click its toolbar button, SMK Vision captures an
+    image of the visible area of your current browser tab, sends that image to one or more AI
+    vision models you have configured, and displays the model's answer in a small panel on the
+    page. Nothing happens unless you trigger it.
+  </p>
+
+  <h2><span class="n">02</span> Information stored on your device</h2>
+  <p>
+    All of the following is kept in Chrome's extension storage, on your computer only. None of
+    it is transmitted to the developer, and none of it is synced between your devices.
+  </p>
+
+  <h3>API keys</h3>
+  <p>
+    The keys you enter are stored in <code>chrome.storage.local</code>. That storage area is
+    explicitly restricted to trusted extension contexts, which means the script that runs on
+    ordinary web pages cannot read your keys — only the extension's own background worker and
+    settings page can. Keys are sent only to the service they belong to, over HTTPS, and are
+    stripped out of every error message the extension displays.
+  </p>
+
+  <h3>Your settings and hotkeys</h3>
+  <p>
+    Your chosen models, care level, timeouts, answer prompt, appearance preferences, and any
+    custom keyboard shortcuts are stored the same way.
+  </p>
+
+  <h3>Recent answers</h3>
+  <p>
+    The ten most recent answers are kept so you can re-display one without spending another
+    request. Each entry holds the answer text, a timestamp, and which models produced it.
+    <strong>Screenshots are never stored, and API keys are never stored in this history.</strong>
+    You can delete any single entry, or clear the whole list, from the settings page.
+  </p>
+
+  <h3>Diagnostics</h3>
+  <p>
+    Details of the most recent request — what each model replied and how long it took — are kept
+    in session storage so you can inspect a failure. This is discarded when you close your browser.
+  </p>
+
+  <h2><span class="n">03</span> Information sent off your device</h2>
+  <p>
+    Exactly one thing is transmitted, and only when you trigger a capture: <strong>the screenshot
+    image, together with your answer instructions</strong>. It goes directly from your browser to
+    the AI provider you configured, authenticated with your own API key. The screenshot is held in
+    memory for the duration of that request and then discarded — the extension never writes it to
+    disk and never sends it anywhere else.
+  </p>
+  <p>
+    A screenshot may contain whatever happens to be visible in your tab at that moment. You decide
+    when to capture and, if you use area selection, exactly which part of the page is included.
+  </p>
+
+  <h3>Where it goes</h3>
+  <p>These are the only external addresses the extension can reach. Each is used only if you have entered a key for it.</p>
+  <ul class="endpoints">
+    <li><b>Google Gemini</b> <code>generativelanguage.googleapis.com</code></li>
+    <li><b>Groq</b> <code>api.groq.com</code></li>
+    <li><b>OpenRouter</b> <code>openrouter.ai</code></li>
+    <li><b>Mistral</b> <code>api.mistral.ai</code></li>
+    <li><b>OpenAI</b> <code>api.openai.com</code></li>
+  </ul>
+  <p>
+    Once your screenshot reaches one of these services it is governed by that company's privacy
+    policy and data-retention practices, not this one. Review the policy of whichever service you
+    choose to use, and do not capture anything you are not willing to send to it.
+  </p>
+
+  <h2><span class="n">04</span> Why each permission is needed</h2>
+  <div class="scroll">
+    <table>
+      <thead>
+        <tr><th scope="col">Permission</th><th scope="col">What it is used for</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><code>activeTab</code></td><td>Capture a screenshot of the tab you invoke the extension on.</td></tr>
+        <tr><td><code>tabs</code></td><td>Read the address of the tab an answer came from, so a saved answer is only re-shown on that same page.</td></tr>
+        <tr><td><code>scripting</code></td><td>Draw the answer panel and the area-selection rectangle on the page when you run it.</td></tr>
+        <tr><td><code>storage</code></td><td>Keep your keys, settings and recent answers on your device.</td></tr>
+        <tr><td><code>offscreen</code></td><td>Run a request in a worker that outlives the background script, so a slow answer is not cut off.</td></tr>
+        <tr><td><code>clipboardWrite</code></td><td>Copy the answer when you click it.</td></tr>
+        <tr><td><code>http://*/*</code><br><code>https://*/*</code></td><td>Show the answer panel on whatever page you are reading, and detect the custom keyboard shortcuts you configured.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>
+    Chrome summarises that last entry as permission to "read and change all your data on all
+    websites", which is the only wording Chrome offers for it. In practice the extension does not
+    read page content. The script that runs on pages listens for the specific key combinations you
+    set in settings and does nothing else; it holds no keys and inspects no text. The answer to your
+    question comes from an image of the screen, not from reading the document.
+  </p>
+
+  <h2><span class="n">05</span> What is not collected</h2>
+  <ul>
+    <li>No analytics, telemetry, crash reporting or usage statistics.</li>
+    <li>No browsing history, page text, form contents or cookies.</li>
+    <li>No name, email address, location or device identifier.</li>
+    <li>No advertising identifiers, and no tracking of any kind.</li>
+    <li>No remote code: the extension runs only the code shipped in its package and downloads no scripts at runtime.</li>
+  </ul>
+
+  <h2><span class="n">06</span> Sharing and sale of data</h2>
+  <p>
+    The developer receives no user data and therefore has none to share. Nothing is sold,
+    rented, traded, or transferred to any third party, and nothing is used for advertising,
+    creditworthiness or lending purposes. The AI provider you choose receives your screenshot
+    because you directed the extension to send it there.
+  </p>
+
+  <h2><span class="n">07</span> Your control</h2>
+  <ul>
+    <li><strong>Remove a key</strong> — clear the field in settings and save; it is erased from storage.</li>
+    <li><strong>Delete answers</strong> — remove a single entry or clear the entire history from the settings page.</li>
+    <li><strong>Stop a request</strong> — cancel a request already in flight at any time.</li>
+    <li><strong>Erase everything</strong> — uninstalling the extension deletes all of its stored data from your browser.</li>
+  </ul>
+
+  <h2><span class="n">08</span> Children</h2>
+  <p>
+    SMK Vision is not directed at children under 13 and does not knowingly collect information
+    from them. Since it collects no personal information from anyone, there is nothing to delete
+    on request.
+  </p>
+
+  <h2><span class="n">09</span> Changes to this policy</h2>
+  <p>
+    If the extension's handling of data changes, this policy is updated and the effective date
+    at the top is revised. Material changes will be noted in the extension's release notes.
+  </p>
+
+  <h2><span class="n">10</span> Contact</h2>
+  <p>
+    Questions about this policy, or about how the extension handles your data, can be raised at
+    <a href="https://github.com/taaha64/smk-vision/issues">github.com/taaha64/smk-vision/issues</a>.
+  </p>
+
+  <footer>
+    <p>
+      SMK Vision is an independent project and is not affiliated with, endorsed by, or sponsored
+      by Google, Groq, OpenRouter, Mistral AI or OpenAI. Product names are the trademarks of their
+      respective owners.
+    </p>
+  </footer>
+</div>
